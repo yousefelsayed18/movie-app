@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+}
+:root {
+  --background: white;
+  --searchground: rgba(128, 128, 128, 0.959);
+  --blackcolor: black;
+  --detailesground: white;
+}
+.details{
+  background-color: var(--detailesground);
+}
+.darkmode {
+  color: var(--blackcolor);
+}
+.appbar {
+  background-color: var(--background) !important;
+}
+.searchbar {
+  background-color: var(--searchground) !important;
+}
+[data-theme="dark"] {
+  --background: black;
+  --searchground: #1d787f;
+  --blackcolor: white;
+  --detailesground: #2d434d;
+}
+
+.card {
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.card:hover {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
 }
